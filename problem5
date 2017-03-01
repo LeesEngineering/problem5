@@ -1,0 +1,13 @@
+=begin
+Problem 5 = Upload a spreadsheet and a ruby file for this.
+In the spreadsheet have a column of first names, a column of
+middle initials and a column of last names,
+I want the ruby file to return an array of the people's full names.
+=end
+
+require 'csv'
+
+csv = CSV.read('names.csv')
+CSV.foreach('names.csv') do |row|
+  puts row.inspect
+end
